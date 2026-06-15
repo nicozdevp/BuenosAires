@@ -1,0 +1,75 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+    <link href="{% static 'core/css/home.css'%}" rel="stylesheet"> 
+{% endblock %}
+
+<br>
+
+{% block content %}
+    <div class="container mt-4 "> 
+        <div class="text-center factura-titulo">
+            <h1 >
+                {% if es_admin %}
+                    Historial de Solicitudes
+                {% else %}
+                    Mis Solicitudes de Servicio <br> 
+                    <span style="font-size: 0.7em; color: #555;"></span>
+                {% endif %}
+            </h1>
+            
+        </div>
+        <br> 
+        {% if db_error %} 
+            <div class="alert alert-danger" role="alert">
+                {{ db_error }}
+            </div>
+        {% endif %}
+
+        {% if error_message %}
+            <div class="alert alert-warning" role="alert">
+                {{ error_message }}
+            </div>
+        {% endif %}
+
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nro SS</th>
+                        <th>Cliente</th>
+                        <th>Tipo SS</th>
+                        <th>Fecha Visita</th>
+                        <th>Hora Visita</th>
+                        <th>Técnico</th>
+                        <th>Descripción</th>
+                        <th>Estado SS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if lista %}
+                        {% for sol in lista %}
+                            <tr>
+                                <td data-label="Nro SS:">{{ sol.nrosol }}</td>
+                                <td data-label="Cliente:">{{ sol.nomcli }}</td>
+                                <td data-label="Tipo SS:">{{ sol.tiposol }}</td>
+                                <td data-label="Fecha Visita:">{{ sol.fechavisita|date:"d/m/Y" }}</td>
+                                <td data-label="Hora Visita:">{{ sol.hora }}</td>
+                                <td data-label="Técnico:">{{ sol.nomtec }}</td>
+                                <td data-label="Descripción:">{{ sol.descser }}</td>
+                                <td data-label="Estado SS:">{{ sol.estadosol }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="8" class="text-center">No hay solicitudes de servicio para mostrar.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+
+{% endblock content %}

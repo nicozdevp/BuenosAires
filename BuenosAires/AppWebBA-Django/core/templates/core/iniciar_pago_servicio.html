@@ -1,0 +1,144 @@
+{% extends 'core/base.html' %}
+
+{% block stylesheet %}
+<style>
+  form {
+    max-width: 520px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background: #f9f9fb;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+  }
+  h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 6px;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #555;
+  }
+  input[disabled], textarea[disabled] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #e9ecef;
+    color: #666;
+    font-size: 1rem;
+    resize: none;
+    box-sizing: border-box;
+    cursor: not-allowed;
+  }
+  textarea[disabled] {
+    min-height: 90px;
+  }
+  p {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+  p strong {
+    color: #333;
+  }
+  .buttons {
+    text-align: center;
+    margin-top: 30px;
+  }
+  button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+  }
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  button[type="button"]:hover {
+    background-color: #495057;
+  }
+  a {
+    text-decoration: none;
+  }
+  .confirmation-message {
+    background-color: #e6f4ea;
+    border-left: 6px solid #28a745;
+    color: #155724;
+    padding: 15px 20px;
+    margin: 0 auto 30px auto;
+    max-width: 520px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<h2>Confirmar Solicitud de Servicio</h2>
+
+<div class="confirmation-message">
+  Por favor, revisa los detalles de tu solicitud antes de confirmar el pago. Si todo está correcto, pulsa <strong>"Confirmar y Pagar"</strong> para continuar.
+</div>
+
+<form method="GET" action="{{ url_tbk }}">
+  <input type="hidden" name="token_ws" value="{{ token_ws }}">
+
+  <label>Tipo de solicitud:</label>
+  <input type="text" value="{{ tipo_servicio }}" disabled>
+
+  <label>Descripción:</label>
+  <textarea disabled>{{ descripcion_servicio }}</textarea>
+
+  <label>Fecha de la visita:</label>
+  <input type="text" value="{{ fecha_servicio }}" disabled>
+
+  <label>Hora de la visita:</label>
+  <input type="text" value="{{ hora_servicio }}" disabled>
+
+  <label>Precio del servicio:</label>
+  <input type="text" value="${{ amount }}" disabled>
+
+  <h3>Datos del Cliente</h3>
+  <p><strong>Nombre:</strong> {{ first_name }} {{ last_name }}</p>
+  <p><strong>Email:</strong> {{ email }}</p>
+  <p><strong>RUT:</strong> {{ rut }}</p>
+  <p><strong>Dirección:</strong> {{ dirusu }}</p>
+
+  <div class="buttons">
+    <button type="submit">Confirmar y Pagar</button>
+    <a href="{% url 'ingresar_solicitud_servicio' %}">
+      <button type="button">Cancelar</button>
+    </a>
+  </div>
+</form>
+{% endblock %}

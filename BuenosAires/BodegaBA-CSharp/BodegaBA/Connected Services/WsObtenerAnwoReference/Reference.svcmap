@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="90ad3c00-af87-4fc3-a821-e9eb9b1cbc41" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54964/WsAnwo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WsAnwo.disco" MetadataType="Disco" ID="0ac229a3-3cdd-4e5c-bf9b-275fd88f9fa7" SourceId="1" SourceUrl="http://localhost:54964/WsAnwo.svc?disco" />
+    <MetadataFile FileName="WsAnwo.xsd" MetadataType="Schema" ID="687db8a6-6848-45dc-9388-89781ae135ee" SourceId="1" SourceUrl="http://localhost:54964/WsAnwo.svc?xsd=xsd2" />
+    <MetadataFile FileName="WsAnwo1.xsd" MetadataType="Schema" ID="aeb89ace-db2d-41db-b8f3-654432822518" SourceId="1" SourceUrl="http://localhost:54964/WsAnwo.svc?xsd=xsd1" />
+    <MetadataFile FileName="WsAnwo2.xsd" MetadataType="Schema" ID="61f79325-a55d-47b5-8885-5e1fb3f425f4" SourceId="1" SourceUrl="http://localhost:54964/WsAnwo.svc?xsd=xsd0" />
+    <MetadataFile FileName="WsAnwo.wsdl" MetadataType="Wsdl" ID="29450c09-5e4f-4eba-85e7-311e8c5bf6b4" SourceId="1" SourceUrl="http://localhost:54964/WsAnwo.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

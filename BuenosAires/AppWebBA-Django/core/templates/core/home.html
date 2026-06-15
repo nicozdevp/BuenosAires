@@ -1,0 +1,208 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+    <link href="{% static 'core/css/home.css' %}?v=4.1" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="pre-title">Expertos en climatización comercial</p>
+                <h1>Soluciones Integrales de <span>Climatización</span> para tu Negocio</h1>
+                <p class="subtitle">Optimizamos el confort térmico de tus espacios con tecnología de vanguardia y servicio certificado</p>
+                <div class="cta-buttons">
+                
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{% static 'core/img/home2.jpg' %}" alt="Sistema de climatización profesional" loading="lazy">
+                <div class="experience-badge">
+                    <span>15+ Años</span>
+                    <small>Experiencia</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Servicios Section -->
+<section class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-preheading">Nuestros servicios</p>
+            <h2 class="section-title">Soluciones Completas para Climatización</h2>
+            <p class="section-description">Desde diseño hasta mantenimiento continuo, cubrimos todas tus necesidades de climatización</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Instalación Profesional</h3>
+                <p>Cálculo de carga térmica, diseño de sistemas y montaje por técnicos certificados con garantía de funcionamiento.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Diseño personalizado</li>
+                    <li><i class="fas fa-check"></i> Cálculo de carga térmica</li>
+                    <li><i class="fas fa-check"></i> Certificación final</li>
+                </ul>
+                <a href="#" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="service-card highlighted">
+                <div class="service-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Programas anuales personalizados para maximizar eficiencia energética y extender la vida útil de tus equipos.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Planes anuales</li>
+                    <li><i class="fas fa-check"></i> Optimización energética</li>
+                    <li><i class="fas fa-check"></i> Reportes detallados</li>
+                </ul>
+                <a href="#" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Reparaciones Urgentes</h3>
+                <p>Servicio de emergencia 24/7 con respuesta garantizada en menos de 4 horas para minimizar tiempos de inactividad.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Respuesta 24/7</li>
+                    <li><i class="fas fa-check"></i> Repuestos originales</li>
+                    <li><i class="fas fa-check"></i> Garantía por servicio</li>
+                </ul>
+                <a href="#" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>¿Necesitas asesoría técnica especializada?</h2>
+            <p>Nuestros ingenieros están listos para evaluar tus necesidades y ofrecerte la mejor solución</p>
+            <a href="#contacto" class="btn btn-primary btn-large">
+                <i class="fas fa-calendar-alt"></i> Agendar Visita Técnica
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto Section -->
+<section class="contact-section" id="contacto">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-preheading">Contacto</p>
+            <h2 class="section-title">Hablemos de tu proyecto</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Información de contacto</h3>
+                <p>Complete el formulario y un especialista se comunicará con usted en menos de 1 hora hábil para evaluar sus necesidades.</p>
+                
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h4>Oficina Central</h4>
+                            <p>Av. Apoquindo 4500, Las Condes, Santiago</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h4>Teléfono</h4>
+                            <p>+56 2 2345 6789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h4>Email</h4>
+                            <p>contacto@climatizacionpro.cl</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h4>Horario de atención</h4>
+                            <p>Lunes a Viernes: 8:30 - 18:30<br>
+                            Emergencias: 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-media">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Solicita una consulta</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telefono" placeholder="Teléfono">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select name="servicio" required>
+                            <option value="" disabled selected>Servicio de interés</option>
+                            <option value="instalacion">Instalación profesional</option>
+                            <option value="mantenimiento">Mantenimiento preventivo</option>
+                            <option value="reparacion">Reparación de emergencia</option>
+                            <option value="diseno">Diseño de sistemas</option>
+                            <option value="optimizacion">Optimización energética</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="mensaje" placeholder="Describa brevemente sus necesidades" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Enviar consulta
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

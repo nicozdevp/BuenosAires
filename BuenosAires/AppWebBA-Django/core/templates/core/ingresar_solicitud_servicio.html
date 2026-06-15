@@ -1,0 +1,121 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+    <link href="{% static 'core/css/forms.css'%}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Mejoras simples para el formulario */
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+            font-family: 'Open Sans', sans-serif;
+        }
+        h2 {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #555;
+        }
+        input[type="text"][readonly] {
+            background-color: #e9ecef;
+            border: 1px solid #ccc;
+            padding: 8px;
+            width: 100%;
+            border-radius: 4px;
+            color: #666;
+        }
+        input[type="text"], input[type="date"], input[type="time"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            cursor: pointer;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        button[type="reset"] {
+            background-color: #6c757d;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        button[type="reset"]:hover {
+            background-color: #495057;
+        }
+        p.error-message {
+            color: #d93025;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<h2>Ingresar una Solicitud de Servicio</h2>
+
+<form method="post" action="{% url 'ingresar_solicitud_servicio' %}">
+    {% csrf_token %}
+
+    <label for="precio">Precio de la visita:</label>
+    <input id="precio" type="text" name="precio" value="25000" readonly>
+
+    <label for="tipo">Tipo de solicitud:</label>
+    <select id="tipo" name="tipo" required>
+        <option value="">Seleccione un tipo</option>
+        <option value="Mantención">Mantención</option>
+        <option value="Reparación">Reparación</option>
+    </select>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+    <label for="fecha">Fecha de la visita:</label>
+    <input id="fecha" type="date" name="fecha" required>
+
+    <label for="hora">Hora de la visita:</label>
+    <input id="hora" type="time" name="hora" required>
+
+    <div style="text-align:center;">
+        <button type="submit">Pagar</button>
+        <button type="reset">Limpiar</button>
+    </div>
+</form>
+
+{% if mesg %}
+    <p class="error-message">{{ mesg }}</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:54964/WsAutenticacion.svc?singleWsdl" uri="xml-resources/web-service-references/WsAutenticacion/wsdl/localhost_54964/WsAutenticacion.svc.singlewsdl.wsdl"/>
+    <system systemId="http://localhost:54964/WsProducto.svc?wsdl" uri="xml-resources/web-service-references/WsProducto/wsdl/localhost_54964/WsProducto.svc.wsdl"/>
+    <system systemId="http://localhost:54964/WsProducto.svc?xsd=xsd0" uri="xml-resources/web-service-references/WsProducto/wsdl/localhost_54964/WsProducto.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://localhost:54964/WsProducto.svc?xsd=xsd1" uri="xml-resources/web-service-references/WsProducto/wsdl/localhost_54964/WsProducto.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://localhost:54964/WsProducto.svc?xsd=xsd2" uri="xml-resources/web-service-references/WsProducto/wsdl/localhost_54964/WsProducto.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://localhost:54964/WsProducto.svc?xsd=xsd3" uri="xml-resources/web-service-references/WsProducto/wsdl/localhost_54964/WsProducto.svc.xsd_xsd3.xsd"/>
+    <system systemId="http://localhost:54964/WsProductoJava.svc?wsdl" uri="xml-resources/web-service-references/WsProductoJava/wsdl/localhost_54964/WsProductoJava.svc.wsdl"/>
+    <system systemId="http://localhost:54964/WsProductoJava.svc?xsd=xsd0" uri="xml-resources/web-service-references/WsProductoJava/wsdl/localhost_54964/WsProductoJava.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://localhost:54964/WsProductoJava.svc?xsd=xsd1" uri="xml-resources/web-service-references/WsProductoJava/wsdl/localhost_54964/WsProductoJava.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://localhost:54964/WsProductoJava.svc?xsd=xsd2" uri="xml-resources/web-service-references/WsProductoJava/wsdl/localhost_54964/WsProductoJava.svc.xsd_xsd2.xsd"/>
+</catalog>

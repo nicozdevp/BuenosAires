@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B8002AC-F9A9-4601-818F-AE50F5819AD6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BuenosAires.Model</RootNamespace>
+    <AssemblyName>BuenosAires.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnwoStockProducto.cs" />
+    <Compile Include="authtoken_token.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="auth_group.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="auth_group_permissions.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="auth_permission.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="auth_user.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="auth_user_groups.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="auth_user_user_permissions.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuenosAiresEDM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="django_admin_log.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="django_content_type.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="django_migrations.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="django_session.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuiaDespacho.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemGuiaDespacho.cs" />
+    <Compile Include="PerfilUsuario.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Producto.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemStockProducto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respuesta.cs" />
+    <Compile Include="SolicitudServicio.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockProducto.cs">
+      <DependentUpon>BuenosAiresEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="UtilForms.cs" />
+    <Compile Include="UtilValidaciones.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BuenosAiresEDM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BuenosAiresEDM.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

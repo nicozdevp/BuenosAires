@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="WsProducto" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54964/WsProducto.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54964/WsProducto.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54964/WsProducto.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BuenosAires.Model" />
+      <xsd:import schemaLocation="http://localhost:54964/WsProducto.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsProducto_Crear_InputMessage">
+    <wsdl:part name="parameters" element="tns:Crear" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Crear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_LeerTodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerTodos" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_LeerTodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerTodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Leer_InputMessage">
+    <wsdl:part name="parameters" element="tns:Leer" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Leer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Reservar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reservar" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Reservar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReservarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_ObtenerEquiposEnBodega_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEquiposEnBodega" />
+  </wsdl:message>
+  <wsdl:message name="IWsProducto_ObtenerEquiposEnBodega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEquiposEnBodegaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsProducto">
+    <wsdl:operation name="Crear">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsProducto/Crear" message="tns:IWsProducto_Crear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsProducto/CrearResponse" message="tns:IWsProducto_Crear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerTodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsProducto/LeerTodos" message="tns:IWsProducto_LeerTodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsProducto/LeerTodosResponse" message="tns:IWsProducto_LeerTodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Leer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsProducto/Leer" message="tns:IWsProducto_Leer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsProducto/LeerResponse" message="tns:IWsProducto_Leer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsProducto/Actualizar" message="tns:IWsProducto_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsProducto/ActualizarResponse" message="tns:IWsProducto_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reservar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsProducto/Reservar" message="tns:IWsProducto_Reservar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsProducto/ReservarResponse" message="tns:IWsProducto_Reservar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsProducto/Eliminar" message="tns:IWsProducto_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsProducto/EliminarResponse" message="tns:IWsProducto_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEquiposEnBodega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsProducto/ObtenerEquiposEnBodega" message="tns:IWsProducto_ObtenerEquiposEnBodega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsProducto/ObtenerEquiposEnBodegaResponse" message="tns:IWsProducto_ObtenerEquiposEnBodega_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsProducto" type="tns:IWsProducto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Crear">
+      <soap:operation soapAction="http://tempuri.org/IWsProducto/Crear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerTodos">
+      <soap:operation soapAction="http://tempuri.org/IWsProducto/LeerTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Leer">
+      <soap:operation soapAction="http://tempuri.org/IWsProducto/Leer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IWsProducto/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reservar">
+      <soap:operation soapAction="http://tempuri.org/IWsProducto/Reservar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IWsProducto/Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEquiposEnBodega">
+      <soap:operation soapAction="http://tempuri.org/IWsProducto/ObtenerEquiposEnBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsProducto">
+    <wsdl:port name="BasicHttpBinding_IWsProducto" binding="tns:BasicHttpBinding_IWsProducto">
+      <soap:address location="http://localhost:54964/WsProducto.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

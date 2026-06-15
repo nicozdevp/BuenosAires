@@ -1,0 +1,28 @@
+cd C:\BuenosAires\VentaBA-Java\BuenosAires.VentaBA
+
+mkdir build\generated-sources\jax-ws
+
+"C:\Program Files\Java\jdk1.8.0_202\bin\wsimport.exe" -keep ^
+  -s build/generated-sources/jax-ws ^
+  -d build/classes ^
+  -p buenosaires.proxy ^
+  -Xnocompile ^
+  http://localhost:54964/WsAutenticacion.svc?wsdl
+
+
+
+remplazar la ultima linea si no funciona
+
+http://localhost:54964/WsAutenticacion.svc?singleWsdl
+
+
+cd C:\BuenosAires\VentaBA-Java\BuenosAires.VentaBA
+
+mkdir build\generated-sources\jax-ws
+
+"C:\Program Files\Java\jdk1.8.0_202\bin\wsimport.exe" -keep ^
+  -s build/generated-sources/jax-ws ^
+  -d build/classes ^
+  -p buenosaires.proxy2 ^
+  -Xnocompile ^
+  http://localhost:54964/WsProductoJava.svc?wsdl

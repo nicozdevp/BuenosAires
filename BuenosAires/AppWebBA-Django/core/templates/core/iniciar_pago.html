@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+    <link href="{% static 'core/css/iniciar_sesion.css' %}" rel="stylesheet">
+    <link href="{% static 'core/css/iniciar_pago.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="pago-page">
+    <h1 class="page-title">Iniciar Proceso de Pago</h1>
+
+    <div class="container">
+        <form class="form-wrapper" method="POST" action="{{ url_tbk }}">
+            <div class="centrar">
+                {% csrf_token %}
+
+                <div class="form-line">Número de Orden de Compra: <span>{{ buy_order }}</span></div>
+                <div class="form-line">Nombre cliente: <span>{{ first_name }} {{ last_name }}</span></div>
+                <div class="form-line">RUT: <span>{{ rut }}</span></div>
+                <div class="form-line">Dirección: <span>{{ dirusu }}</span></div>
+                <div class="form-line">Correo electrónico: <span>{{ email }}</span></div>
+                <div class="form-line">Monto a Pagar: <span>${{ amount }}</span></div>
+
+                <input type="hidden" name="token_ws" value="{{ token_ws }}" />
+                <input type="submit" class="btn btn-primary" value="Ir a pagar">
+
+                {% if mesg %}
+                    <div id="form_message" class="alert alert-danger" role="alert">{{ mesg }}</div>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+
+
+</div>
+{% endblock content %}
+

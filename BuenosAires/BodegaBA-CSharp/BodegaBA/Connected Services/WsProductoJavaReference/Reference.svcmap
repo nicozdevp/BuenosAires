@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d975742b-096d-485f-96d1-f5206f10f98c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54964/WsProductoJava.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WsProductoJava.wsdl" MetadataType="Wsdl" ID="627ac644-c75a-4740-a1a9-d8e6f9d067e3" SourceId="1" SourceUrl="http://localhost:54964/WsProductoJava.svc?wsdl" />
+    <MetadataFile FileName="WsProductoJava.xsd" MetadataType="Schema" ID="78397fbd-fb9d-46d8-9215-caee0ac69215" SourceId="1" SourceUrl="http://localhost:54964/WsProductoJava.svc?xsd=xsd2" />
+    <MetadataFile FileName="WsProductoJava1.xsd" MetadataType="Schema" ID="47397e6c-aeeb-4c55-97df-b09f59e416ce" SourceId="1" SourceUrl="http://localhost:54964/WsProductoJava.svc?xsd=xsd0" />
+    <MetadataFile FileName="WsProductoJava.disco" MetadataType="Disco" ID="4d76158e-4b59-46c6-b4a0-cd0ba7d48228" SourceId="1" SourceUrl="http://localhost:54964/WsProductoJava.svc?disco" />
+    <MetadataFile FileName="WsProductoJava2.xsd" MetadataType="Schema" ID="20991b40-e2e2-438c-a82c-a754924bf5f3" SourceId="1" SourceUrl="http://localhost:54964/WsProductoJava.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
