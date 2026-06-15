@@ -293,14 +293,14 @@ python scripts/3-poblar-base-datos.py
 
 | Archivo | Contenido |
 |---|---|
-| `ERS.docx` | Especificación de Requerimientos del Sistema |
-| `Plan de Integracion.docx` | Plan de integración de los sistemas |
-| `Plan de Pruebas de Software.docx` | Estrategia y casos de prueba |
+| `ERS.pdf` | Especificación de Requerimientos del Sistema |
+| `Plan de Integracion.pdf` | Plan de integración de los sistemas |
+| `Plan de Pruebas de Software.pdf` | Estrategia y casos de prueba |
 | `Casos de Prueba de Integracion.xlsx` | Casos de prueba detallados con resultados |
 | `Registro de Defectos.xlsx` | Registro de bugs encontrados durante las pruebas |
-| `Checklist de Ambientes.docx` | Lista de verificación para configuración de ambientes |
-| `Plan de Implantación.docx` | Plan de despliegue del sistema |
-| `Foto de las pruebas.docx` | Evidencia fotográfica de las pruebas ejecutadas |
+| `Checklist de Ambientes.pdf` | Lista de verificación para configuración de ambientes |
+| `Plan de Implantación.pdf` | Plan de despliegue del sistema |
+
 
 ---
 
